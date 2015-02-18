@@ -1,0 +1,66 @@
+<section class="row" data-ng-controller="AuthenticationController">
+	<h2 class="col-md-12 text-center">Sign up</h2>
+	<div class="col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6">
+		<form name="userForm" data-ng-submit="signup()" class="signin form-horizontal" novalidate autocomplete="off">
+			<fieldset>
+			<h5>				
+				<div data-ng-show="error" class="alert alert-danger text-center text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+			</h5>
+			<!-- line1 -->
+				<div class="row">
+					<div class="col-xs-7">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<span class="glyphicon glyphicon-info-sign"></span>
+							</span>
+							<input type="text" id="firstName" name="firstName" class="form-control" data-ng-model="credentials.firstName" placeholder="First Name">
+						</div>
+					</div>
+					<div class="col-xs-5">
+						<input type="text" id="lastName" name="lastName" class="form-control" data-ng-model="credentials.lastName" placeholder="Last Name">
+					</div>
+
+				</div>
+			<!-- /line1 -->				
+
+			<!-- line2 -->
+			<h5>
+				<div class="input-group">
+					<span class="input-group-addon">
+						<span class="glyphicon glyphicon-envelope"></span>
+					</span>
+					<input type="email" required id="email" name="email" class="form-control" data-ng-model="credentials.email" placeholder="* Email">
+				</div>
+			</h5>
+			<!-- /line2 -->
+
+				<div class="input-group">
+					<span class="input-group-addon">
+						<span class="glyphicon glyphicon-user"></span>
+					</span>
+					<input type="text" required id="username" name="username" class="form-control" data-ng-model="credentials.username" placeholder="* Username">
+				</div>
+
+				<!-- line3 -->
+				<h5>
+					<div class="input-group">
+						<span class="input-group-addon">
+							<span class="glyphicon glyphicon-lock"></span>
+						</span>
+						<input type="password" required id="password" name="password" class="form-control" data-ng-model="credentials.password" placeholder="* Password">
+					</div>
+				</h5>
+				<!-- /ine3 -->
+
+				<div class="text-center">
+					<button type="submit" class="btn btn-large btn-primary btn-block">Sign up</button>
+				</div>
+				<div class="text-right">or&nbsp;
+					<a href="/#!/signin" class="show-signup">Sign in</a>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+</section>
